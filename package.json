@@ -13,12 +13,15 @@
   },
   "scripts": {
     "start": "npm run watch:css && react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "npm run build:css && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
     "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css"
   },
+  "homepage": "https://tysonpoulton.github.io/image-gallery/",
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -39,6 +42,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.0",
+    "gh-pages": "^3.2.3",
     "postcss-cli": "^9.0.1",
     "tailwindcss": "^2.2.19"
   }
